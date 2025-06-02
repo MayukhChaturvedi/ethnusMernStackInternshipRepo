@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List Task</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .arrow-heading {
+      background-color: #234d1f;
+      color: white;
+      padding: 10px 20px;
+      display: inline-block;
+      position: relative;
+      font-weight: bold;
+    }
+
+    .arrow-heading::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      border-left: 20px solid #234d1f;
+    }
+
+    .box {
+      border: 1px solid #999;
+      padding: 15px;
+      margin-top: 40px;
+      width: fit-content;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    ul ul {
+      list-style-type: circle;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="arrow-heading">List-Task</div>
+
+  <div class="box">
+    <p>Lists can be nested (list inside list):</p>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+  </div>
+
+</body>
+</html>
