@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>String Repeater</title>
+	</head>
+	<body>
+		<h2>String Repeater</h2>
+		<form id="inputForm">
+			<label for="number">Enter a number: </label>
+			<input type="number" id="number" required min="1" /><br /><br />
+
+			<label for="string">Enter a string: </label>
+			<input type="text" id="string" required /><br /><br />
+
+			<button type="button" onclick="repeatString()">Display</button>
+		</form>
+
+		<div id="output"></div>
+
+		<script>
+			function repeatString() {
+				const n = parseInt(document.getElementById("number").value);
+				const s = document.getElementById("string").value;
+				let result = "";
+
+				for (let i = 1; i <= n; i++) {
+					result += `${i}. ${s}<br>`;
+				}
+
+				document.getElementById("output").innerHTML = result;
+			}
+		</script>
+	</body>
+</html>
